@@ -21,10 +21,17 @@ footer{
     margin-right: auto;
     margin-bottom: 3em;
     width: 60%;
+    
+}
+.display-in-line{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 3em;
+
 }
 /* h1, h2, h3, h4{
     
@@ -92,16 +99,18 @@ li{
   
 }
 .image-box-at-rigth{
-    margin: 0;
-    padding-right: 2em;
-    
+    float: right;
+    margin: auto;
+    padding-left: 2em;
 }
 .image-box-at-left{
-    margin-left: 0;
-    padding-left: 2em;
+    float: left;
+    margin: auto;
+    padding-right: 2em;
 }
 
 .text-box{
+    flex: 1;
     margin-top: 0;
     
 }
