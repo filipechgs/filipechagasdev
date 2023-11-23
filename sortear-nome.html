@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="./public/style/style.css">
     </head>
 <body>
-    <h2>Sortear nome</h2>
+    <h3>Sortear nome</h3>
     <input type="text" name="addName" id="addName" placeholder="Escreva um nome">
     <button id="insetNameButton">+</button>
     <br><br>
@@ -33,10 +33,10 @@
         // 7. Apagar a lista
         const buttonAddName = document.getElementById('insetNameButton');
         const buttonPickName = document.getElementById('pickNameButton');
+        const buttonRestartDrawn = document.getElementById('restartDrawn');
 
         let namesList = [];
         let namesAlreadyPicked = [];
-        // let recurssionLimiter = namesList.length;
 
         buttonAddName.addEventListener("click", () => {
             const nameInput = document.getElementById('addName').value;
@@ -46,17 +46,27 @@
             document.getElementById('nameList').innerHTML += `<li>${nameInput}</li>`;
             document.getElementById('addName').value = '';
         });
-
+        
         buttonPickName.addEventListener("click", pickRandomName);
         
+        buttonRestartDrawn.addEventListener("click", () => {
+            document.getElementById('namesDrawn').innerHTML = "";
+            
+            namesAlreadyPicked = [];
+            
+            pickRandomName();
+        })
+        
         function pickRandomName () {
-            let randomNumber = getRandomIndexOfArray(namesList);
-            let getedName = namesList[randomNumber];
+            const randomNumber = getRandomIndexOfArray(namesList);
+            const getedName = namesList[randomNumber];
             
             if (!namesAlreadyPicked.includes(getedName)) {
                 namesAlreadyPicked.push(getedName)
                 document.getElementById('namesDrawn').innerHTML += `<li>${getedName}</li>`;
             }
+            if (namesAlreadyPicked.length !== namesList.length) return pickRandomName();
+
         }
 
         function getRandomIndexOfArray (array) {
