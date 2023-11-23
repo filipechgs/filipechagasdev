@@ -58,7 +58,7 @@
         })
         
         function pickRandomName () {
-            const randomNumber = getRandomIndexOfArray(namesList);
+            const randomNumber = Math.floor(Math.random() * namesList.length);;
             const getedName = namesList[randomNumber];
             
             if (!namesAlreadyPicked.includes(getedName)) {
@@ -66,10 +66,6 @@
                 document.getElementById('namesDrawn').innerHTML += `<li>${getedName}</li>`;
             }
             if (namesAlreadyPicked.length !== namesList.length) return pickRandomName();
-        }
-
-        function getRandomIndexOfArray (array) {
-            return Math.floor(Math.random() * array.length);
         }
     </script>
 </body>
