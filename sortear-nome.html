@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Sortear nome</h2>
+    <input type="text" name="addName" id="addName" placeholder="Escreva um nome">
+    <button id="insetNameButton">+</button>
+    <br><br>
+    <button id="pickNameButton">Sortear!</button>
+    <br><br>
+    <button id="restartDrawn">Reiniciar sorteio</button>
+    
+
+    <h3>Nomes listados</h3>
+    <ul id="nameList"></ul>
+    
+    <h3>Sorteados</h3>
+    <ol id="namesDrawn"></ol>
+
+    <script>
+        // Algorítmo do sorteio de nomes:
+        // 1. Adicionar o nome de cada pessoa em uma lista
+        // 2. Mostar a lista
+        // 3. Sortear um nome da lista
+        // 4. Mostrar o nome sorteado
+        // 5. Impedir que o nome já sorteado se repita no sorteio
+        // 6. Sortear o próximo nome até todos os nomes terem sido sorteados
+        // 7. Apagar a lista
+        const buttonAddName = document.getElementById('insetNameButton');
+        const buttonPickName = document.getElementById('pickNameButton');
+
+        let namesList = [];
+        let namesAlreadyPicked = [];
+        // let recurssionLimiter = namesList.length;
+
+        buttonAddName.addEventListener("click", () => {
+            const nameInput = document.getElementById('addName').value;
+            
+            namesList.push(nameInput);
+
+            document.getElementById('nameList').innerHTML += `<li>${nameInput}</li>`;
+            document.getElementById('addName').value = '';
+        });
+
+        buttonPickName.addEventListener("click", pickRandomName);
+        
+        function pickRandomName () {
+            let randomNumber = getRandomIndexOfArray(namesList);
+            let getedName = namesList[randomNumber];
+            
+            if (!namesAlreadyPicked.includes(getedName)) {
+                namesAlreadyPicked.push(getedName)
+                document.getElementById('namesDrawn').innerHTML += `<li>${getedName}</li>`;
+            }
+        }
+
+        function getRandomIndexOfArray (array) {
+            return Math.floor(Math.random() * array.length);
+        }
+    </script>
+</body>
+</html>
