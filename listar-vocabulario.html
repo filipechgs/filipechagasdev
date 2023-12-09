@@ -7,18 +7,37 @@
         <link rel="stylesheet" href="./public/style/style.css">
     </head>
 <body>
-    <h2>Verbum</h2>
-    <div>
-        <textarea name="textInput" id="textInput" cols="30" rows="10" placeholder="Escreva ou cole o texto aqui."></textarea><br>
-        <button id="insertButton">Obter vocabulário</button>
+    <header>
+        <div class="fixed-at-top">
+            <p><a id="homeLink" href="index.html"> Filipe C. dev</a></p>
+        </div>
+    </header>
 
-        <h3 id="vocabulary"></h3>
-        <p id="numberOfWords"></p>
-        <table id="wordsList">
-            
-        </table>
+    <div class="center-main-box">
+        <div class="info-box">
+            <h3><a href="./utilitarios.html">Utilitários livres</a></h3>
+            <h3>Verbum</h3>  
+            <div>
+                <textarea name="textInput" id="textInput" cols="30" rows="10" placeholder="Escreva ou cole o texto aqui."></textarea><br>
+                <button id="insertButton">Obter vocabulário</button>
+
+                <h3 id="vocabulary"></h3>
+                <p id="numberOfWords"></p>
+                <table id="wordsList">
+                    
+                </table>
+            </div>
+        </div>
     </div>
 
+    <footer>
+        <p class="text-inside-header-or-footer">Deselviolvido por Filipe L. G. Chagas</p>
+        <div class="display-in-line">
+            <a href=""><img id="githubMark" src="./public/images/github-mark.png" alt=""></a>
+            <a href=""><img id="linkedinMark" src="./public/images/In-Blue-26@2x.png" alt=""></a>
+        </div>
+    </footer>
+    
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             formatText('textInput');

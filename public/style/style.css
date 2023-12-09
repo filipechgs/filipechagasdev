@@ -36,11 +36,15 @@ a{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
     text-decoration: none;
     color: #4287f5;
+    font-weight: bold;
 }
 li{
-    text-decoration: none;
+    font-size: medium;
+    text-decoration: none;    
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: left;
 }
+ul
 /* Id */
 #profilePicture{
     width: 6.5em;
@@ -72,7 +76,7 @@ li{
 }
 #homeLink{
     color: grey;
-    text-decoration: ;
+    text-decoration: none;
 }
 /* Class */
 .fixed-at-top{
@@ -107,6 +111,13 @@ li{
   border-radius: 3em
   
 }
+.info-box{   
+    margin-bottom: 3em;
+    padding: 1em;
+    border: solid 1px lightgray;  
+    border-radius: 3em
+    
+  }
 .image-box-at-rigth{
     float: right;
     margin: auto;

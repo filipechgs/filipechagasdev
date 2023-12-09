@@ -7,30 +7,40 @@
         <link rel="stylesheet" href="./public/style/style.css">
     </head>
 <body>
-    <h3>Sortear nome</h3>
-    <input type="text" name="addName" id="addName" placeholder="Escreva um nome">
-    <button id="insetNameButton">+</button>
-    <br><br>
-    <button id="pickNameButton">Sortear!</button>
-    <br><br>
-    <button id="restartDrawn">Reiniciar sorteio</button>
+    <header>
+        <div class="fixed-at-top">
+            <p><a id="homeLink" href="index.html"> Filipe C. dev</a></p>
+        </div>
+    </header>
     
+    <div class="center-main-box">
+        <div class="info-box">
+            <h3><a href="./utilitarios.html">Utilitários livres</a></h3>
+            <h4>Sortear nome</h4>
+            <input type="text" name="addName" id="addName" placeholder="Escreva um nome">
+            <button id="insetNameButton">+</button>
+            <br><br>
+            <button id="pickNameButton">Sortear!</button>
+            <br><br>
+            <button id="restartDrawn">Reiniciar sorteio</button>
+            <br><br>
+            <p><b>Nomes listados</b></p>
+            <ul id="nameList"></ul>
+            
+            <p><b>Sorteados</b></p>
+            <ol id="namesDrawn"></ol>
+        </div>
+    </div>
 
-    <h3>Nomes listados</h3>
-    <ul id="nameList"></ul>
-    
-    <h3>Sorteados</h3>
-    <ol id="namesDrawn"></ol>
+    <footer>
+        <p class="text-inside-header-or-footer">Deselviolvido por Filipe L. G. Chagas</p>
+        <div class="display-in-line">
+            <a href=""><img id="githubMark" src="./public/images/github-mark.png" alt=""></a>
+            <a href=""><img id="linkedinMark" src="./public/images/In-Blue-26@2x.png" alt=""></a>
+        </div>
+    </footer>
 
     <script>
-        // Algorítmo do sorteio de nomes:
-        // 1. Adicionar o nome de cada pessoa em uma lista
-        // 2. Mostar a lista
-        // 3. Sortear um nome da lista
-        // 4. Mostrar o nome sorteado
-        // 5. Impedir que o nome já sorteado se repita no sorteio
-        // 6. Sortear o próximo nome até todos os nomes terem sido sorteados
-        // 7. Apagar a lista
         const buttonAddName = document.getElementById('insetNameButton');
         const buttonPickName = document.getElementById('pickNameButton');
         const buttonRestartDrawn = document.getElementById('restartDrawn');
