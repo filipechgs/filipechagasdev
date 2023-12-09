@@ -70,6 +70,10 @@ li{
     margin: 0 10px; 
     height: auto;
 }
+#homeLink{
+    color: grey;
+    text-decoration: ;
+}
 /* Class */
 .fixed-at-top{
     background-color: rgba(255, 255, 255, 0.5); /* Red color with 50% transparency */
@@ -158,35 +162,36 @@ li{
         margin-right: auto;
         margin-bottom: 3em;
         margin-top: 3em;
+        width: 95%
 
     }
     /* Id */
     #profilePicture{
-        width: 4.5em;
+        width: 4em;
         clip-path: circle();
     }
     #projectsPicture{
-        width: 4.5em;
+        width: 4em;
         clip-path: circle();
         align-self: center;
     }
     #professionalQualification{
-        width: 4.5em;
+        width: 4em;
         clip-path: circle();
     }
-    /* Class */
-    .fixed-at-top{
-        background-color: rgba(255, 255, 255, 0.5); /* Red color with 50% transparency */
-        backdrop-filter: blur(10px);
-        border: 1px lightgray;
-        border-style: solid;
-        border-radius: 2em;
-        position: fixed;
-        z-index: 99;
-        top: .5em;
-        
-        
+    #githubMark{
+    width: 1.5em;
+    margin: 0 10px; 
+    margin-top: 1em;
     }
+    #linkedinMark{
+        width: 1.5em;
+        margin: 0 10px;
+        margin-top: 1em;
+        height: auto;
+    }
+    /* Class */
+
     .fixed-at-top, p, a{
         margin: 0;
         padding-left: .15em;
@@ -203,7 +208,8 @@ li{
     .info-box-with-image{   
       display: block;
       margin-bottom: 1em;
-      padding: 1em;
+      padding-top:  1em;
+      padding-bottom: 1em;
       border: solid 1px lightgray;  
       border-radius: 3em
 
