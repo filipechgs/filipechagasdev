@@ -9,7 +9,7 @@ body{
 }
 
 header{
-    margin-top: 3em;
+    margin-top: 5em;
     margin-bottom: 3em;
     margin-left: auto;
     margin-right: auto;
@@ -23,30 +23,20 @@ footer{
     width: 60%;
     
 }
-.display-in-line{
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 3em;
-
-}
-/* h1, h2, h3, h4{
-    
-} */
+/*h1, h2, h3, h4{
+    text-align: center;
+}*/
 p{
     line-height: 2em;
     font-size: medium;
     color: rgb(40, 40, 40);
     text-align: left;
 }
-/* a{
-    line-height: 2em;
+a{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
-    text-decoration: none; 
-} */
+    text-decoration: none;
+    color: #4287f5;
+}
 li{
     text-decoration: none;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -81,6 +71,21 @@ li{
     height: auto;
 }
 /* Class */
+.fixed-at-top{
+    background-color: rgba(255, 255, 255, 0.5); /* Red color with 50% transparency */
+    backdrop-filter: blur(10px);
+    border: 1px lightgray;
+    border-style: solid;
+    border-radius: 2em;
+    position: fixed;
+    z-index: 99;
+    top: .5em
+}
+.fixed-at-top, p, a{
+    margin: 0;
+    padding-left: .15em;
+    padding-right: .15em;
+}
 .text-inside-header-or-footer{
     text-align: center;
 }
@@ -94,7 +99,7 @@ li{
   flex-direction: row;
   margin-bottom: 3em;
   padding: 1em;
-  border: solid 1px gray;  
+  border: solid 1px lightgray;  
   border-radius: 3em
   
 }
@@ -108,12 +113,127 @@ li{
     margin: auto;
     padding-right: 2em;
 }
+.display-in-line{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3em;
 
+}
 .text-box{
     flex: 1;
     margin-top: 0;
     
 }
+
 /* .info-box{
     
 } */
+@media screen and (max-width: 800px) {
+    body{
+        text-align: center;
+    }
+    p{
+    line-height: 2em;
+    font-size: medium;
+    color: rgb(40, 40, 40);
+    text-align: center;
+    }
+    h1, h2, h3, h4{
+    text-align: center;
+    }
+    header{
+        margin-top: 5em;
+        margin-bottom: 3em;
+        margin-left: auto;
+        margin-right: auto;
+        width: 95%;
+
+    }
+    footer{
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 3em;
+        margin-top: 3em;
+
+    }
+    /* Id */
+    #profilePicture{
+        width: 4.5em;
+        clip-path: circle();
+    }
+    #projectsPicture{
+        width: 4.5em;
+        clip-path: circle();
+        align-self: center;
+    }
+    #professionalQualification{
+        width: 4.5em;
+        clip-path: circle();
+    }
+    /* Class */
+    .fixed-at-top{
+        background-color: rgba(255, 255, 255, 0.5); /* Red color with 50% transparency */
+        backdrop-filter: blur(10px);
+        border: 1px lightgray;
+        border-style: solid;
+        border-radius: 2em;
+        position: fixed;
+        z-index: 99;
+        top: .5em;
+        
+        
+    }
+    .fixed-at-top, p, a{
+        margin: 0;
+        padding-left: .15em;
+        padding-right: .15em;
+    }
+    .text-inside-header-or-footer{
+        text-align: center;
+    }
+    .center-main-box{
+        margin-left: auto;
+        margin-right: auto;
+        width: 95%;
+    }
+    .info-box-with-image{   
+      display: block;
+      margin-bottom: 1em;
+      padding: 1em;
+      border: solid 1px lightgray;  
+      border-radius: 3em
+
+    }
+    .image-box-at-rigth{
+        position: inherit;
+        float: none;
+        margin-top: 1em;
+        margin-left: 0%;
+        margin-right: 15%;
+        
+    }
+    .image-box-at-left{
+        position: inherit;
+        float: none;
+        margin-top: 1em;
+        margin-left: 32%;
+        margin-right: 25%;
+    }
+    
+    .display-in-line{
+
+        display: block;
+        justify-content: center;
+        align-items: center;
+        height: 3em;
+
+    }
+    .text-box{
+        text-align: center;
+    }
+
+}
